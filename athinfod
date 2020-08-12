@@ -31,7 +31,7 @@ def get_definitions_from_file(queries, filepath):
             line = line.strip()
             if not line or line.startswith('#'):
                 continue
-            (query, shell_command) = string.split(line, maxsplit=1)
+            (query, shell_command) = line.split(maxsplit=1)
             queries[query] = [shell_command, False]
     return queries
 
@@ -39,14 +39,14 @@ def get_query_access(filepath, queries):
     enablement = {'enable': True, 'disable': False}
     with open(filepath, "r") as access:
         for line in access:
-            (action, query) = string.split(line.strip(), maxsplit=1)
+            (action, query) = line.strip().split(maxsplit=1)
             if action not in enablement:
                 raise Exception('Invalid syntax in athinfo.access')
             if query not in queries and query != '*':
                 raise Exception(
                     'athinfo.access references query "%s" that is not defined' %
                     (query,))
-            for (key, value) in queries.iteritems():
+            for (key, value) in queries.items():
                 if key == query or query == '*':
                     queries[key][1] = enablement[action]
 
