@@ -1,4 +1,4 @@
-%define name athinfo
+%define name athinfod
 %define version 10.2
 %define unmangled_version 10.2
 %define release 1
