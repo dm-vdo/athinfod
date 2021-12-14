@@ -1,0 +1,8 @@
+[Unit]
+Description=Athinfod Application
+
+[Service]
+User=root
+Group=root
+ExecStart=/usr/bin/athinfod
+StandardInput=socket
