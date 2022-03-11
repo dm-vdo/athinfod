@@ -19,6 +19,8 @@ lastimage	sed -n 's/Image Build Date: //p' 2>/dev/null < /var/log/bunsen.log
 lastinstall	sed -n 's/Install Date: //p' 2>/dev/null < /var/log/bunsen.log
 listeners	netstat -an --inet --tcp | awk '$NF == "LISTEN"'
 login		test -f /etc/nologin; echo $?
+lsblk           lsblk -o name,maj:min,kname,type,fstype,state,sched,uuid
+lsblk-f         lsblk -o name,maj:min,kname,uuid,mountpoint
 memory		grep MemTotal /proc/meminfo
 modules 	lsmod
 numdisks	cat /proc/ide/h*/media | grep disk | wc -l
