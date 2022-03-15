@@ -2,8 +2,8 @@
 %global debug_package %{nil}
 
 %define name athinfod
-%define version 10.2
-%define unmangled_version 10.2
+%define version 10.3
+%define unmangled_version 10.3
 %define release 2
 
 Name:      %{name}
@@ -68,6 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_presetdir}/01-athinfod.preset
 
 %changelog
+* Tue Dec 14 2021 Andy Walsh <awalsh@redhat.com> - 10.3-2
+- Updated athinfo.defs to add some lsblk queries.
+
 * Tue Dec 14 2021 Andy Walsh <awalsh@redhat.com> - 10.2-2
 - Updated to work with systemd on modern systems without xinet.d.
 
