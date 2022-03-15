@@ -28,7 +28,7 @@ either requiring authentication from the remote host end OR creating
 a security hole on the local host.
 
 %prep
-%setup -n %{name}-%{version}
+%setup -n %{name}-master
 
 %build
 python3 setup.py build
