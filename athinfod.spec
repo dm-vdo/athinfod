@@ -13,8 +13,8 @@ License:   MIT
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Prefix:    %{_prefix}
 Vendor:    Debathena Project <debathena@mit.edu>
-URL:       https://github.com/mit-athena/athinfo
-Source0:   https://gitlab.cee.redhat.com/vdo/open-sourcing/tools/third/athinfod/-/archive/master/athinfod-master.tar.gz
+URL:       https://github.com/mit-athena/athinfod
+Source0:   https://github.com/dm-vdo/athinfod/archive/refs/heads/main.tar.gz
 Summary:   athinfo server
 
 BuildRequires: python3
@@ -28,7 +28,7 @@ either requiring authentication from the remote host end OR creating
 a security hole on the local host.
 
 %prep
-%setup -n %{name}-master
+%setup -n %{name}-main
 
 %build
 python3 setup.py build
