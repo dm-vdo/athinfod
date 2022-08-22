@@ -4,7 +4,7 @@
 %define name athinfod
 %define version 10.3
 %define unmangled_version 10.3
-%define release 2
+%define release 3
 
 Name:      %{name}
 Version:   %{version}
@@ -68,6 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_presetdir}/01-athinfod.preset
 
 %changelog
+* Mon Aug 22 2022 Joe Shimkus <jshimkus@redhat.com> - 10.3-3
+- Updated athinfo.defs to add scam data queries.
+
 * Tue Dec 14 2021 Andy Walsh <awalsh@redhat.com> - 10.3-2
 - Updated athinfo.defs to add some lsblk queries.
 
