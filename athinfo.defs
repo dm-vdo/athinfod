@@ -29,6 +29,12 @@ ps		ps auxww
 queries		cat /etc/athena/athinfo.defs
 restart_sshd    systemctl restart sshd
 routes		netstat -rn
+scam_albireo	scam ALBIREO
+scam_ansible	scam ANSIBLE
+scam_beaker	scam BEAKER
+scam_devvm	scam DEVVM
+scam_farm	scam FARM
+scam_vagrant	scam VAGRANT
 sssd		systemctl status sssd | awk '/Active:/ {print $2}'
 swap		swapon -s
 tcp		netstat -n --tcp
