@@ -6,6 +6,7 @@
 
 # Query		Command
 
+boot_id		cat /proc/sys/kernel/random/boot_id
 checkServer	/permabit/build/tools/lastrun/checkServer.pl
 checkserver	/permabit/build/tools/lastrun/checkServer.pl
 cpuspeed	grep MHz /proc/cpuinfo
