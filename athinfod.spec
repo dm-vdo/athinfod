@@ -4,7 +4,7 @@
 %define name athinfod
 %define version 10.3
 %define unmangled_version 10.3
-%define release 4
+%define release 5
 
 Name:      %{name}
 Version:   %{version}
@@ -68,6 +68,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_presetdir}/01-athinfod.preset
 
 %changelog
+* Wed Jan 31 2024 Chung Chung <cchung@redhat.com> - 10.3-5
+- Updated athinfo.defs to add checkReimage support.
+- Replace distutils with setuptools in setup.py since distutils is deprecated.
+
 * Wed Jun 28 2023 Joe Shimkus <jshimkus@redhat.com> - 10.3-4
 - Updated athinfo.defs to add boot_id query.
 
