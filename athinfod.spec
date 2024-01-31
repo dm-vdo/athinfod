@@ -4,7 +4,7 @@
 %define name athinfod
 %define version 10.3
 %define unmangled_version 10.3
-%define release 5
+%define release 6
 
 Name:      %{name}
 Version:   %{version}
@@ -17,9 +17,9 @@ URL:       https://github.com/mit-athena/athinfod
 Source0:   https://github.com/dm-vdo/athinfod/archive/refs/heads/main.tar.gz
 Summary:   athinfo server
 
-BuildRequires: python3
+BuildRequires: python3 python3-setuptools
 BuildRequires: systemd
-Requires:      python3
+Requires:      python3 python3-setuptools
 %{?systemd_requires}
 
 %description
@@ -68,6 +68,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_presetdir}/01-athinfod.preset
 
 %changelog
+* Wed Jan 31 2024 Chung Chung <cchung@redhat.com> - 10.3-6
+- Add python3-setuptools to require package since it is
+  only installed in RHEL8 by default.
+
 * Wed Jan 31 2024 Chung Chung <cchung@redhat.com> - 10.3-5
 - Updated athinfo.defs to add checkReimage support.
 - Replace distutils with setuptools in setup.py since distutils is deprecated.
